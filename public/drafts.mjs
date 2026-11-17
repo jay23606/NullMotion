@@ -49,7 +49,7 @@ const KINDS = {
   },
   input(b, t, o, c, tl, span) {
     if (o.h) { const title = el(b, `left:0;right:0;top:64px;text-align:center;font-size:32px;font-weight:700`, o.h); tl.from(title, { opacity: 0, y: 12, duration: .4 }, 0); }
-    const box = el(b, `left:100px;top:${o.h ? 130 : 130}px;width:440px;height:100px;border-radius:18px;border:2px solid ${c.line};background:${c.card}`);
+    const box = el(b, `left:100px;top:${o.h ? 150 : 130}px;width:440px;height:100px;border-radius:18px;border:2px solid ${c.line};background:${c.card}`);
     const typed = el(box, `left:22px;top:20px;right:60px;font-size:20px;white-space:nowrap;overflow:hidden`, t);
     el(box, `left:22px;bottom:16px;font-size:22px;color:${c.muted}`, '+');
     const send = el(box, `right:16px;bottom:14px;width:30px;height:30px;border-radius:50%;background:${c.accent}`);
