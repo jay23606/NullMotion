@@ -122,7 +122,7 @@ function seekFrom(event) {
 }
 $('strip').addEventListener('pointerdown', event => { if (exporting) return; dragging = true; $('strip').setPointerCapture(event.pointerId); seekFrom(event); });
 $('strip').addEventListener('pointermove', event => { if (dragging) seekFrom(event); });
-$('strip').addEventListener('pointerup', () => { dragging = false; });
+for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) $('strip').addEventListener(type, () => { dragging = false; });
 $('seek').addEventListener('input', () => { video.currentTime = Number($('seek').value); render(); });
 $('final-toggle').addEventListener('click', () => {
   if (exporting) return;
